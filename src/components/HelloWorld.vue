@@ -20,6 +20,7 @@ import 'quill/dist/quill.snow.css'
 
 Quill.register('modules/imageDrop', ImageDrop)
 Quill.register('modules/resize', QuillResize)
+
 export default {
   props: ['value'],
   components: {
