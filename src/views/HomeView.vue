@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="editor-wrap" id="editor-wrap">
+      <HelloWorld v-model="content" />
+    </div>
+    <div>{{content}}</div>
   </div>
 </template>
 
@@ -13,6 +15,11 @@ export default {
   name: 'HomeView',
   components: {
     HelloWorld
+  },
+  data () {
+    return {
+      content: ''
+    }
   }
 }
 </script>
