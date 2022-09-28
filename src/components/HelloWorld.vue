@@ -11,6 +11,12 @@ import { VueEditor, Quill } from 'vue2-editor'
 import { ImageDrop } from 'quill-image-drop-module'
 import QuillResize from 'quill-resize-module'
 import defaultToolbar from './defaultToolBar'
+import 'vue2-editor/dist/vue2-editor.css'
+
+/* Import the Quill styles you want */
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.bubble.css'
+import 'quill/dist/quill.snow.css'
 
 Quill.register('modules/imageDrop', ImageDrop)
 Quill.register('modules/resize', QuillResize)
@@ -27,7 +33,7 @@ export default {
         modules: {
           imageDrop: true,
           resize: {
-            modules: ['Resize', 'DisplaySize', 'Toolbar']
+            modules: ['Resize', 'DisplaySize']
           }
         }
       }
